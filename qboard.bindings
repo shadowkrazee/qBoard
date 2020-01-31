@@ -1,0 +1,15 @@
+# qCopy -- copy the selection to the clipboard file
+"bash /home/doduser/Documents/qBoard/qBoard.sh -c"
+  b:8
+# qPaste -- paste the first entry, and remove it from the clipboard file
+"bash /home/doduser/Documents/qBoard/qBoard.sh -p"
+  b:9
+# dump qClip -- empty the clipboard file
+"bash /home/doduser/Documents/qBoard/qBoard.sh -d"
+  F1
+# toggle qMode -- switches between Standard and Rotate modes
+"bash /home/doduser/Documents/qBoard/qBoard.sh -m"
+ Release + F2
+# safe qPaste -- does not remove entry from qClip file
+"bash /home/doduser/Documents/qBoard/qBoard.sh -p --safe"
+ shift + b:9

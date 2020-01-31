@@ -1,0 +1,47 @@
+.\" Manpage for qboard.
+.\" Contact [ shadowkrazee@gmail.com | masonstooksbury@gmail.com ] to correct errors or typos.
+.TH qboard 1 "Jan 2019" "0.1" "qboard man page"
+.SH NAME
+qboard \- clipboard that behaves as a queue 
+.SH SYNOPSIS
+qboard [OPTIONS]
+.SH DESCRIPTION
+qboard is an application that allows the user to copy multiple items at once and paste them back in the order they copied them (like a queue!). qboard has two modes: Standard and Rotate. In Standard mode, the user will be able to copy several items and paste them back in the order they were copied. In Rotate mode, the user will be able to copy several items and paste them in the order they were copied as many times as they would like (e.g. If you copy '1', '2', and '3'; it will paste 1,2,3,1,2,3,1,2,3...) Rotate mode also includes a feature colloquially known as "Machine Gun Paste". This let's the user copy several items, and by holding 'Shift' as you paste, it will freeze on a selection in the rotation and paste it as many times as you like until you move onto the next item in the rotation (e.g. If you copy '1', '2', and '3'; you could do 1,2,3,1,2,2,2,2,3,3,3,1,2,3)
+.SH OPTIONS
+qboard does not technically take any options unless you are debugging or testing, but here they are:
+
+-c  This will run the 'copy' method
+
+-p  This will run the 'paste' method
+    (Has an optional option '--safe' to do Machine Gun Paste)
+
+-d  This will run the 'dump' method to clear out the 'clipboard' used
+    by qboard
+
+-m  This will run the 'mode' method to toggle the mode between
+    'Standard' and 'Rotate'
+.SH FILES
+qBoard.sh
+    This is the main script that handles all of the logic
+
+qClip
+    This is the 'clipboard' that is used by qBoard to stage all of the 
+    copy/pasting
+
+qBoard.config
+    This is the config file that qBoard references to determine what
+    mode it is in
+
+qBoard.bindings
+    This is the default bindings used by xbindkeys in order to map the 
+    various functions to different buttons on either your mouse or 
+    keyboard
+
+.SH BUGS
+No known bugs.
+.SH AUTHORS
+                        ~~~ The Automages ~~~
+
+Johnathan Wood                   &&                    Mason Stooksbury
+
+(shadowkrazee@gmail.com)         &&         (masonstooksbury@gmail.com)
