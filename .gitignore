@@ -1,0 +1,45 @@
+# Rust-specific
+/target
+**/*.rs.bk
+
+# Generated files
+Cargo.lock
+
+# Remove Cargo.lock from .gitignore if creating an executable, leave it for libraries
+# More information: https://doc.rust-lang.org/cargo/guide/cargo-toml-vs-cargo-lock.html
+
+# Dependency directories
+**/.cargo
+
+# Rust build output
+**/debug/
+**/release/
+
+# Backup files
+*.swp
+*~
+.DS_Store
+
+# IDE-specific files
+# For example, VSCode:
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Other common IDEs
+*.sublime*
+*.vs/
+*.vscode/
+nbproject/
+.sln
+.suo
+*.sw?
+*.user
+*.userprefs
+*.unity
+*.sdf
+*.pidb
+*.booproj
+*.svd
