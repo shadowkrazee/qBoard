@@ -6,4 +6,12 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-clipboard = "0.5"
+clipboard = "0.5" # Adjust the version as needed; ensure compatibility with your target platform
+serde = { version = "1.0", features = ["derive"] }
+serde_pickle = "0.6" # Use for pickle-like serialization; adjust version as needed
+
+# Optional: If you decide to use a more sophisticated CLI argument parser
+# clap = "3.0" # Adjust the version as needed
+
+# Use this crate for file and IO operations if needed
+# tokio = { version = "1", features = ["full"] }
